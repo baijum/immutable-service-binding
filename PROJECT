@@ -1,0 +1,19 @@
+domain: x-k8s.io
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: service-binding
+repo: github.com/baijum/immutable-service-binding
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: x-k8s.io
+  group: binding
+  kind: ServiceBinding
+  path: github.com/baijum/immutable-service-binding/api/v1beta1
+  version: v1beta1
+version: "3"
